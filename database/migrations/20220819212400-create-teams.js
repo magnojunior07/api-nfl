@@ -20,6 +20,10 @@ module.exports = {
           allowNull: false,
           type: DataTypes.STRING
         },
+        conference: {
+          allowNull: false,
+          type: DataTypes.STRING
+        },
         createdAt: {
           allowNull: false,
           type: DataTypes.DATE
