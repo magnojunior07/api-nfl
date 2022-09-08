@@ -5,7 +5,11 @@ const { Op } = require("sequelize");
 
 class TeamController {
     get_all_teams = async (req, res) => {
-        const teams = await Team.findAll()
+        const teams = await Team.findAll({
+            order: [
+                ["id", "ASC"]
+            ] 
+        })
         res.set({
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Credentials" : true 
@@ -44,6 +48,10 @@ class TeamController {
         const team_updates = req.body
         const team = await Team.findByPk(req.params.id)
 
+        team.id !== team_updates.id ? team.set({
+            id: team_updates.id
+        })  : team.id
+
         team.name !== team_updates.name ? team.set({
             name: team_updates.name
         })  : team.name
@@ -78,7 +86,7 @@ class TeamController {
 
         res.json(`Item deletado com sucesso`)
     }
- 
+
 }
 
 module.exports = TeamController
