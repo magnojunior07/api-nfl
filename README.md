@@ -9,7 +9,7 @@
   - NodeJS
   - Express
   - Sequelize
-  - Esta <a href="https://static.www.nfl.com/t_person_squared_mobile/f_auto/league/api/clubs/logos/">API</a> foi usada como fonte das logos das equipes, basta digitar a sigla da equipe desejada, em caixa alta, no fim da URL 
+  - Esta <a href="https://static.www.nfl.com/t_person_squared_mobile/f_auto/league/api/clubs/logos/">API</a> foi usada como fonte das logos das equipes, basta digitar a sigla da equipe desejada no fim da URL.
   
 ## Getting Started
 
